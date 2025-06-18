@@ -14,7 +14,7 @@ class Settings(BaseSettings):
     LOG_LEVEL: str = os.getenv("LOG_LEVEL", "INFO")
       # Gemini Model Configuration
     GEMINI_MODEL: str = "gemini-2.0-flash"
-    GEMINI_TEMPERATURE: float = 0.2
+    GEMINI_TEMPERATURE: float = 0.5
     GEMINI_MAX_OUTPUT_TOKENS: int = 512
     
     # Vector Store Configuration
