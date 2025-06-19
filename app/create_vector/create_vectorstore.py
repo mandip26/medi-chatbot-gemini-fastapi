@@ -4,9 +4,6 @@ import pickle
 import numpy as np
 from dotenv import load_dotenv
 
-# Add app directory to path
-sys.path.append('./app')
-
 # Load environment variables
 load_dotenv()
 
@@ -51,7 +48,7 @@ def recreate_vectorstore():
         print("\n=== Recreating Vectorstore ===")
         
         # Import required modules
-        from services.chatbot_service import GoogleEmbeddings
+        from app.services.chatbot_service import GoogleEmbeddings
         from langchain_community.vectorstores import FAISS
         from langchain.text_splitter import RecursiveCharacterTextSplitter
         from langchain_community.document_loaders import PyPDFLoader, DirectoryLoader

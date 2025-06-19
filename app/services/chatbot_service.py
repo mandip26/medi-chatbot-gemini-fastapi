@@ -5,8 +5,8 @@ from typing import Optional, List
 from langchain_community.vectorstores import FAISS
 from langchain.embeddings.base import Embeddings
 
-from core.config import settings
-from models.schemas import ChatResponse, SourceDocument
+from app.core.config import settings
+from app.models.schemas import ChatResponse, SourceDocument
 
 logger = logging.getLogger(__name__)
 

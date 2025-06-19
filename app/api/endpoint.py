@@ -2,8 +2,8 @@ from fastapi import APIRouter, HTTPException, Depends, Request
 from typing import Optional
 import logging
 
-from models.schemas import ChatRequest, ChatResponse, ErrorResponse
-from services.chatbot_service import ChatbotService
+from app.models.schemas import ChatRequest, ChatResponse, ErrorResponse
+from app.services.chatbot_service import ChatbotService
 
 logger = logging.getLogger(__name__)
 

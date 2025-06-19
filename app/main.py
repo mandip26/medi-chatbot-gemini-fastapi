@@ -7,9 +7,9 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 
-from api.endpoint import router as api_router
-from core.config import settings
-from services.chatbot_service import ChatbotService
+from app.api.endpoint import router as api_router
+from app.core.config import settings
+from app.services.chatbot_service import ChatbotService
 
 # Configure logging
 logging.basicConfig(
@@ -57,7 +57,7 @@ app = FastAPI(
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:8001"], 
+    allow_origins=["http://localhost:5173", "http://localhost:8001", "https://blood-donation-frontend-seven.vercel.app/"], 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -78,9 +78,10 @@ async def health_check():
 
 if __name__ == "__main__":
     import uvicorn
+    port = int(os.environ.get("PORT", 5001))
     uvicorn.run(
         "main:app",
         host="0.0.0.0",
-        port=5001,
+        port=port,
         reload=False
     )
