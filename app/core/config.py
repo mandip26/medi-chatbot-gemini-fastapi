@@ -10,7 +10,6 @@ class Settings(BaseSettings):
     
     # API Configuration
     GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "")
-    ENVIRONMENT: str = os.getenv("ENVIRONMENT", "development")
     LOG_LEVEL: str = os.getenv("LOG_LEVEL", "INFO")
       # Gemini Model Configuration
     GEMINI_MODEL: str = "gemini-2.0-flash"
