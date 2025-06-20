@@ -57,7 +57,7 @@ app = FastAPI(
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "https://blood-donation-backend-buge.onrender.com", "https://blood-donation-frontend-ashy.vercel.app"], 
+    allow_origins=["http://localhost:5173", "https://blood-donation-backend-buge.onrender.com", "https://blood-donation-frontend-gray.vercel.app"], 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
